@@ -5,8 +5,10 @@
   "main": "dist/app.js",
   "scripts": {
     "start": "tsc && node dist/app.js",
+    "start:worker": "tsc && node dist/worker.js",
     "lint": "eslint . --ext .ts",
     "dev": "nodemon --exec ts-node src/app.ts",
+    "start:worker:dev": "nodemon --exec ts-node src/worker.ts",
     "prepare": "husky"
   },
   "keywords": [],
@@ -14,6 +16,8 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@bull-board/api": "^6.19.0",
+    "@bull-board/express": "^6.19.0",
     "bullmq": "^5.69.3",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
